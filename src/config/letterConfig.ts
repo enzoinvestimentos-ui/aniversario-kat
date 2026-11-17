@@ -14,7 +14,7 @@
  * horizontal), exibe a foto inteira sem cortes e permite abrir em tela cheia.
  * ============================================================================
  */
-export const HANDWRITTEN_LETTER_IMAGE_SRC = '';
+export const HANDWRITTEN_LETTER_IMAGE_SRC = '/carta.jpeg';
 
 /**
  * ============================================================================
