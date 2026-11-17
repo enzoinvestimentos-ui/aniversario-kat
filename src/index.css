@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-hand: 'Caveat', cursive;
+
+  --color-cream: #FFF7ED;
+  --color-paper: #FFFBF4;
+  --color-linen: #F7ECDF;
+  --color-chocolate: #4A2925;
+  --color-milk: #8B5947;
+  --color-strawberry: #E9A6AD;
+  --color-rose: #D98C98;
+  --color-caramel: #D6A36A;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #FFF7ED;
+    color: #4A2925;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #FFF7ED;
+    color: #4A2925;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #E9A6AD;
+    color: #4A2925;
+  }
+}
+
+/* Subtle organic cotton-paper grain overlay */
+.paper-texture {
+  background-color: #FFFBF4;
+  background-image:
+    radial-gradient(rgba(74, 41, 37, 0.032) 1px, transparent 0),
+    radial-gradient(rgba(214, 163, 106, 0.045) 1px, transparent 0);
+  background-size: 28px 28px, 19px 19px;
+  background-position: 0 0, 9px 11px;
+}
+
+/* Delicate chocolate-wafer embossed border detail */
+.wafer-stripe {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(74, 41, 37, 0.06),
+    rgba(74, 41, 37, 0.06) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
+/* Subtle Polaroid archival shadow */
+.polaroid-shadow {
+  box-shadow:
+    0 18px 40px -16px rgba(74, 41, 37, 0.16),
+    0 4px 12px -4px rgba(74, 41, 37, 0.08);
+}
+
+/* Washi / masking tape accent */
+.washi-tape {
+  background: linear-gradient(
+    90deg,
+    rgba(233, 166, 173, 0.42) 0%,
+    rgba(214, 163, 106, 0.35) 100%
+  );
+  backdrop-filter: blur(2px);
+}
+
+@keyframes gentle-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+
+@keyframes soft-twinkle {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.06);
+  }
+}
+
+.animate-gentle-float {
+  animation: gentle-float 6s ease-in-out infinite;
+}
+
+.animate-soft-twinkle {
+  animation: soft-twinkle 4.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-gentle-float,
+  .animate-soft-twinkle {
+    animation: none;
+  }
+}

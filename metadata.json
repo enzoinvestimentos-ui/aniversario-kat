@@ -1,0 +1,6 @@
+{
+  "name": "For Kit Kat — A Little Birthday World",
+  "description": "A warm, handcrafted digital scrapbook and birthday surprise made just for Kit Kat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
